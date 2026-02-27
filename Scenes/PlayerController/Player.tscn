@@ -861,6 +861,7 @@ graph_offset = Vector2(143, -22)
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_58yxs"]
+xfade_time = 0.1
 advance_mode = 2
 advance_condition = &"moving"
 advance_expression = "abs(velocity.length()) > 1f
@@ -869,6 +870,7 @@ advance_expression = "abs(velocity.length()) > 1f
 "
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ok72i"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"idle"
 advance_expression = "
@@ -892,6 +894,7 @@ advance_mode = 2
 advance_condition = &"jump"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g16to"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"jump"
 
@@ -917,6 +920,7 @@ advance_expression = "
 "
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k00lm"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"jump"
 
@@ -939,24 +943,29 @@ advance_mode = 2
 advance_expression = "slideTimer > 0.1f"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x8jey"]
+xfade_time = 0.05
 advance_mode = 2
 advance_expression = "slideTimer > 0.1f"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2wr2a"]
+xfade_time = 0.05
 priority = 2
 advance_mode = 2
 advance_condition = &"moving"
 advance_expression = "abs(velocity.length()) > 1f"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8wsku"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"jump"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pl3ga"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"vault"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u4wft"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"vault"
 
@@ -969,12 +978,14 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6105d"]
+xfade_time = 0.05
 priority = 2
 switch_mode = 2
 advance_mode = 2
 advance_condition = &"inAir"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_up3li"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"vault"
 
@@ -1006,6 +1017,7 @@ advance_mode = 2
 advance_condition = &"wallrun"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g3rwk"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"wallrun"
 
@@ -1016,10 +1028,12 @@ advance_mode = 0
 advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_52itl"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"isLadder"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_knbtf"]
+xfade_time = 0.05
 advance_mode = 2
 advance_condition = &"isLadder"
 
@@ -1071,9 +1085,10 @@ states/vault/position = Vector2(184, -174)
 states/wallrun/node = SubResource("AnimationNodeStateMachine_32ios")
 states/wallrun/position = Vector2(672, -247)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_ohbtc"), "idle", "move", SubResource("AnimationNodeStateMachineTransition_58yxs"), "move", "idle", SubResource("AnimationNodeStateMachineTransition_ok72i"), "move", "jump", SubResource("AnimationNodeStateMachineTransition_onf81"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_g16to"), "jump", "air", SubResource("AnimationNodeStateMachineTransition_0e8h0"), "move", "air", SubResource("AnimationNodeStateMachineTransition_jqjf7"), "idle", "air", SubResource("AnimationNodeStateMachineTransition_osb1d"), "air", "move", SubResource("AnimationNodeStateMachineTransition_nuq7q"), "air", "jump", SubResource("AnimationNodeStateMachineTransition_k00lm"), "air", "idle", SubResource("AnimationNodeStateMachineTransition_kbohn"), "sliding", "air", SubResource("AnimationNodeStateMachineTransition_bysxd"), "air", "sliding", SubResource("AnimationNodeStateMachineTransition_fuksl"), "move", "sliding", SubResource("AnimationNodeStateMachineTransition_x8jey"), "sliding", "move", SubResource("AnimationNodeStateMachineTransition_2wr2a"), "sliding", "jump", SubResource("AnimationNodeStateMachineTransition_8wsku"), "air", "vault", SubResource("AnimationNodeStateMachineTransition_pl3ga"), "sliding", "vault", SubResource("AnimationNodeStateMachineTransition_u4wft"), "move", "vault", SubResource("AnimationNodeStateMachineTransition_5ljx6"), "vault", "move", SubResource("AnimationNodeStateMachineTransition_iep2u"), "vault", "air", SubResource("AnimationNodeStateMachineTransition_6105d"), "jump", "vault", SubResource("AnimationNodeStateMachineTransition_up3li"), "air", "wallrun", SubResource("AnimationNodeStateMachineTransition_sfo1y"), "wallrun", "air", SubResource("AnimationNodeStateMachineTransition_ebtmh"), "wallrun", "jump", SubResource("AnimationNodeStateMachineTransition_et8sg"), "wallrun", "move", SubResource("AnimationNodeStateMachineTransition_jgj5n"), "jump", "wallrun", SubResource("AnimationNodeStateMachineTransition_26t02"), "vault", "wallrun", SubResource("AnimationNodeStateMachineTransition_g3rwk"), "wallrun", "idle", SubResource("AnimationNodeStateMachineTransition_17xna"), "move", "Ladder", SubResource("AnimationNodeStateMachineTransition_52itl"), "air", "Ladder", SubResource("AnimationNodeStateMachineTransition_knbtf"), "idle", "Ladder", SubResource("AnimationNodeStateMachineTransition_2raie"), "Ladder", "move", SubResource("AnimationNodeStateMachineTransition_775yd"), "Ladder", "idle", SubResource("AnimationNodeStateMachineTransition_p5axl"), "Ladder", "air", SubResource("AnimationNodeStateMachineTransition_f6qpx"), "jump", "Ladder", SubResource("AnimationNodeStateMachineTransition_24q5d"), "sliding", "Ladder", SubResource("AnimationNodeStateMachineTransition_y2o8j")]
-graph_offset = Vector2(-152, -182)
+graph_offset = Vector2(-101, -429)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_osdti"]
+graph_offset = Vector2(-582.114, 71.405975)
 nodes/moveState/node = SubResource("AnimationNodeStateMachine_4ibcj")
 nodes/moveState/position = Vector2(-220, 120)
 node_connections = [&"output", 0, &"moveState"]
